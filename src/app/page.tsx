@@ -3,6 +3,10 @@
 import { Button } from "@mui/material"
 import { styled } from '@mui/material/styles'
 
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
+
 const IntroButton = styled(Button)(({ theme }) => ({
   boxShadow: 'none',
   width: "117px",
@@ -14,11 +18,11 @@ const IntroButton = styled(Button)(({ theme }) => ({
   borderRadius: '8px',
   color: 'black',
   fontWeight: 500,
-  border: '1px solid rgba(0, 0, 0, 0.4)',
-  transition: 'border 0.2s ease-in-out',
+  border: '1px solid color-mix(in oklab, var(--foreground) 40%, transparent)',
   '&:hover': {
-    border: '1px solid black',
-  },
+    border: '1px solid var(--foreground)',
+    boxShadow: '0 2px 8px color-mix(in oklab, var(--foreground) 20%, transparent)',
+  }
 }))
 
 export default function Home() {
@@ -28,9 +32,11 @@ export default function Home() {
         <div className="flex justify-between px-[120px] fixed w-full z-10 text-[18px] leading-[1.8] py-3">
           <div>kekekuli</div>
           <ul className="flex gap-12">
-            <li className="inline-block hover:bg-gray-200">Home</li>
-            <li className="inline-block hover:bg-gray-200">About</li>
-            <li className="inline-block hover:bg-gray-200">Contact</li>
+            {["Home", "About", "Contact"].map((item, index) => (
+              <li key={index} className="px-4 py-2 inline-block hover:bg-secondary/30 rounded-xl hover:shadow-[0_2px_8px_color-mix(in_oklab,_var(--foreground)_20%,_transparent)]">
+                {item}
+              </li>
+            ))}
           </ul>
         </div> 
       </header>
@@ -46,6 +52,10 @@ export default function Home() {
               <div className="flex gap-3 justify-start text-foreground">
                 <IntroButton variant="outlined" sx={{
                   backgroundColor: "var(--color-secondary)",
+                  border: '0',
+                  '&:hover': {
+                    border: '0'
+                  }
                 }}>Projects</IntroButton>
                 <IntroButton variant="outlined" sx={{
                   backgroundColor: "white",
@@ -56,13 +66,20 @@ export default function Home() {
           <span className="flex-1 bg-secondary bg-[url(/placeholder.png)] bg-contain max-w-[720px] max-h-[630px]" style={{
             maskImage: "url(/mask-block.svg)",
             maskRepeat: "no-repeat",
-          }}>
-            hhhh  
-          </span>
+          }}></span>
         </div>
       </main>
       <footer>
-
+        <div className="flex justify-center mt-4 flex-col items-center">
+          <div className="flex items-start justify-center gap-6">
+            {[GitHubIcon, LinkedInIcon, EmailIcon].map((Icon, index) => (
+              <Icon key={index} sx={{fontSize: "3rem", p:"0.25rem"}} />
+            ))}
+         </div>
+          <div className="text-foreground/60 text-[16px] relative top-5">
+            kekekuli 2025
+          </div>
+        </div>
       </footer>
     </>
   )
