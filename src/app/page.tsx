@@ -14,6 +14,11 @@ const IntroButton = styled(Button)(({ theme }) => ({
   borderRadius: '8px',
   color: 'black',
   fontWeight: 500,
+  border: '1px solid rgba(0, 0, 0, 0.4)',
+  transition: 'border 0.2s ease-in-out',
+  '&:hover': {
+    border: '1px solid black',
+  },
 }))
 
 export default function Home() {
@@ -48,11 +53,9 @@ export default function Home() {
              </div>
             </div>
           </span>
-          <span className="flex-1 bg-secondary bg-[url(/placeholder.jpg)] bg-contain max-w-[720px] max-h-[630px]" style={{
+          <span className="flex-1 bg-secondary bg-[url(/placeholder.png)] bg-contain max-w-[720px] max-h-[630px]" style={{
             maskImage: "url(/mask-block.svg)",
             maskRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
           }}>
             hhhh  
           </span>
