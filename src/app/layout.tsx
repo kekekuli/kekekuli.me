@@ -24,7 +24,7 @@ export default function RootLayout({
   afterFooter
 }: Readonly<{
   children: React.ReactNode;
-  afterFooter?: React.ReactNode;
+  afterFooter: React.ReactNode;
 }>) {
   return (
     <html lang="en">
