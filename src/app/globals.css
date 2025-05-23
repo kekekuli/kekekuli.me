@@ -21,12 +21,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media not all and (prefers-color-scheme: dark) {
+/* @media not all and (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
   }
-}
+} */
 
 html, body{
   margin: 0;
