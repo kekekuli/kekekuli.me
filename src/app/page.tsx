@@ -22,11 +22,11 @@ export default function Home() {
             >
               here
             </a>
-            .<div className="h-[2px] bg-secondary/35"></div>
-            <div className="text-sm font-thin">
+            .<span className="h-[2px] bg-secondary/35"></span>
+            <span className="text-sm font-thin">
               Not much to see yet, but I’m building fast. Give it a day — this
               place changes quickly.
-            </div>
+            </span>
           </p>
           <div className="flex gap-3 justify-start text-foreground">
             <IntroButton

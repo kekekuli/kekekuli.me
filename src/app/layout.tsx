@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -31,6 +32,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-SPH9BX4RPD"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SPH9BX4RPD');
+          `}
+            </Script>
+          </>
+        )}
         <div className="bg-secondary-background flex justify-center items-center py-4 h-full">
           <div className="bg-background w-[1440px] relative rounded-4xl border-0 shadow-[0_2px_8px_color-mix(in_oklab,_var(--foreground)_20%,_transparent)] overflow-hidden">
             <Header />
