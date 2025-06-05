@@ -1,7 +1,7 @@
 "use client";
 
 import { TextField, FormControl, styled } from "@mui/material";
-import SendButton from "@/components/basicButton"
+import SendButton from "@/components/basicButton";
 
 const borderConfig = {
   border: "1px solid var(--primary-border)",
@@ -83,18 +83,23 @@ export default function Contact() {
             }}
           ></TextField>
         </div>
-        <SendButton sx={{
-          backgroundColor: "var(--color-secondary)",
-          border: "0",
-          "&:hover": {
+        <SendButton
+          sx={{
+            backgroundColor: "var(--color-secondary)",
             border: "0",
-          },
-          width: "89px",
-          height: "43px",
-          paddingBlock: "4px",
-          fontWeight: "600"
-        }} className="self-end">Send</SendButton>
+            "&:hover": {
+              border: "0",
+            },
+            width: "89px",
+            height: "43px",
+            paddingBlock: "4px",
+            fontWeight: "600",
+          }}
+          className="self-end"
+        >
+          Send
+        </SendButton>
       </FormControl>
-   </div>
+    </div>
   );
 }

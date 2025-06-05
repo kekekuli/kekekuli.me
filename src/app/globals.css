@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F9FAFF;
+  --background: #f9faff;
   --foreground: #171717;
-  --secondary: #FDC435;
-  --secondary-background: #FDB935;
-  --primary-border: #E8ECF4;
-  --hover-border: #CBD5E1;
+  --secondary: #fdc435;
+  --secondary-background: #fdb935;
+  --primary-border: #e8ecf4;
+  --hover-border: #cbd5e1;
   --shadow-border: #64748b;
   --hignlight: #2563eb;
 }
@@ -28,7 +28,8 @@
   }
 } */
 
-html, body{
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

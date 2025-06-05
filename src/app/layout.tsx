@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  afterFooter
+  afterFooter,
 }: Readonly<{
   children: React.ReactNode;
   afterFooter: React.ReactNode;

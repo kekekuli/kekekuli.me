@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import IntroButton from "@/components/basicButton";
 import Link from "next/link";
