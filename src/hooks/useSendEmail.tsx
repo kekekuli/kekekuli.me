@@ -83,8 +83,12 @@ export function useSendEmail(isDevMode = false): UseSendEmailResult {
       } else {
         setError(data.error || "Failed to send email.");
       }
-    } catch (e: any) {
-      setError(e.message || "Validation error.");
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        setError(e.message || "Validation error.");
+      } else {
+        setError("Validation error.");
+      }
     } finally {
       setLoading(false);
     }
